@@ -260,6 +260,53 @@
   </div>
 </section>
 
+        <section id="quizView" class="view">
+            <div class="kahoot-app">
+                <div class="kahoot-header">
+                    <h2>⚡ CHEMISTRY QUIZ</h2>
+                    <div class="score-box">⭐ Điểm: <span id="kahootScore">0</span></div>
+                </div>
+
+                <div id="kahootStart" class="kahoot-start">
+                    <div class="result-emoji">🧪</div>
+                    <h2>Thử thách kiến thức Hóa học</h2>
+                    <p>Nhập thông tin để tham gia trò chơi.</p>
+                    <label for="playerName">Tên người chơi</label>
+                    <input id="playerName" type="text" placeholder="Nhập tên của bạn">
+                    <label for="playerClass">Lớp</label>
+                    <input id="playerClass" type="text" placeholder="Ví dụ: 10Si">
+                    <button id="startQuiz" class="next-btn">🚀 Bắt đầu</button>
+                    <p id="startError" class="start-error"></p>
+                </div>
+
+                <div id="kahootGame" hidden>
+                    <div class="progress-info">
+                        <span id="questionCount">Câu 1/10</span>
+                        <span id="timerText">⏱ 20 giây</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="progressBar"></div>
+                    </div>
+                    <div class="kahoot-question-card">
+                        <h2 id="kahootQuestion">Câu hỏi</h2>
+                    </div>
+                    <div id="kahootOptions" class="kahoot-options"></div>
+                    <div id="kahootFeedback" class="kahoot-feedback"></div>
+                    <button id="nextQuestion" class="next-btn" hidden>Câu tiếp theo →</button>
+                </div>
+
+                <div id="kahootEnd" hidden>
+                    <div class="result-emoji">🏆</div>
+                    <h2>Hoàn thành thử thách!</h2>
+                    <p id="finalPlayer"></p>
+                    <p id="finalScore"></p>
+                    <p id="finalCorrect"></p>
+                    <p id="finalMessage"></p>
+                    <button id="playAgain" class="next-btn">🔄 Chơi lại</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
