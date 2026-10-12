@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -13,7 +14,7 @@
     </header>
 
     <nav class="tabs">
-        <button class="tab active" data-view="tableView">Bảng tuần hoàn</button>     
+        <button class="tab active" data-view="tableView">Bảng tuần hoàn</button>
         <button class="tab" data-view="theoryView">📚 Lý thuyết</button>
         <button class="tab" data-view="quizView">Câu hỏi trắc nghiệm</button>
     </nav>
@@ -47,6 +48,7 @@
                     <option value="Họ Lantan">Họ Lantan</option>
                     <option value="Họ Actini">Họ Actini</option>
                 </select>
+
                 <button id="resetFilters">Xóa lọc</button>
             </div>
 
@@ -61,14 +63,16 @@
                 <span><i class="noble"></i> Khí hiếm</span>
             </div>
 
+            <!-- Bảng tuần hoàn chính -->
             <div id="periodicTable" class="periodic-table"></div>
 
-            <div class="series-label">Họ Lantan</div>
-            <div id="lanthanides" class="series"></div>
+            <!-- Hai dãy nguyên tố riêng biệt -->
+            <div class="series-heading">Họ Lanthanide</div>
+            <div id="lanthanides" class="series-table"></div>
 
-            <div class="series-label">Họ Actini</div>
-            <div id="actinides" class="series"></div>
-
+            <div class="series-heading">Họ Actinide</div>
+            <div id="actinides" class="series-table"></div>
+            
             <p class="hint">Nhấn vào một ô nguyên tố để xem thông tin chi tiết.</p>
 
             <div id="elementDetails" class="element-details">
@@ -77,6 +81,173 @@
             </div>
         </section>
 
+        <section id="theoryView" class="view">
+            <div class="theory-container">
+                <h1>📚 LÝ THUYẾT HÓA HỌC</h1>
+                <p class="theory-intro">
+                    Phương pháp lập công thức oxide cao nhất và hydroxide tương ứng
+                    của các nguyên tố nhóm A.
+                </p>
+
+                <div class="theory-card">
+                    <h2>PHẦN 1. PHƯƠNG PHÁP THIẾT LẬP</h2>
+
+                    <h3>Bước 1. Xác định hóa trị cao nhất với oxygen</h3>
+                    <p>
+                        Đối với các nguyên tố nhóm A, hóa trị cao nhất với oxygen
+                        thường tương ứng với số thứ tự nhóm A, từ IA đến VIIA.
+                        Gọi hóa trị đó là n.
+                    </p>
+
+                    <h3>Bước 2. Viết công thức oxide cao nhất</h3>
+                    <p>Gọi nguyên tố cần xét là R, oxygen có hóa trị II.</p>
+                    <ul>
+                        <li><b>n lẻ:</b> Công thức oxide là R₂Oₙ.</li>
+                        <li><b>n chẵn:</b> Công thức R₂Oₙ được tối giản thành ROₙ/₂.</li>
+                    </ul>
+
+                    <div class="theory-example">
+                        <b>Ví dụ:</b> Oxide cao nhất của phosphorus là P₂O₅.
+                    </div>
+
+                    <h3>Bước 3. Viết hydroxide tương ứng</h3>
+                    <ul>
+                        <li><b>Kim loại:</b> Có thể tạo hydroxide dạng bazơ như ROH, R(OH)₂, R(OH)₃.</li>
+                        <li><b>Phi kim:</b> Thường xét axit có oxygen tương ứng với oxide cao nhất.</li>
+                    </ul>
+
+                    <p><b>Các dạng thường gặp:</b></p>
+                    <ul>
+                        <li>Nhóm IVA: H₂RO₃, ví dụ H₂CO₃.</li>
+                        <li>Nhóm VA: HNO₃ hoặc H₃RO₄, ví dụ H₃PO₄.</li>
+                        <li>Nhóm VIA: H₂RO₄, ví dụ H₂SO₄.</li>
+                        <li>Nhóm VIIA: HRO₄, ví dụ HClO₄.</li>
+                    </ul>
+                </div>
+
+                <div class="theory-card">
+                    <h2>PHẦN 2. BẢNG HỆ THỐNG CÔNG THỨC</h2>
+
+                    <div class="theory-table-wrap">
+                        <table class="theory-table">
+                            <thead>
+                                <tr>
+                                    <th>Nội dung</th>
+                                    <th>IA</th>
+                                    <th>IIA</th>
+                                    <th>IIIA</th>
+                                    <th>IVA</th>
+                                    <th>VA</th>
+                                    <th>VIA</th>
+                                    <th>VIIA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Electron lớp ngoài cùng</th>
+                                    <td>1</td><td>2</td><td>3</td><td>4</td>
+                                    <td>5</td><td>6</td><td>7</td>
+                                </tr>
+                                <tr>
+                                    <th>Hóa trị với oxygen</th>
+                                    <td>I</td><td>II</td><td>III</td><td>IV</td>
+                                    <td>V</td><td>VI</td><td>VII</td>
+                                </tr>
+                                <tr>
+                                    <th>Oxide cao nhất</th>
+                                    <td>R₂O</td><td>RO</td><td>R₂O₃</td>
+                                    <td>RO₂</td><td>R₂O₅</td><td>RO₃</td><td>R₂O₇</td>
+                                </tr>
+                                <tr>
+                                    <th>Ví dụ oxide</th>
+                                    <td>Na₂O</td><td>MgO</td><td>Al₂O₃</td>
+                                    <td>SiO₂</td><td>N₂O₅, P₂O₅</td><td>SO₃</td><td>Cl₂O₇</td>
+                                </tr>
+                                <tr>
+                                    <th>Hóa trị với hydrogen</th>
+                                    <td>—</td><td>—</td><td>—</td><td>IV</td>
+                                    <td>III</td><td>II</td><td>I</td>
+                                </tr>
+                                <tr>
+                                    <th>Hợp chất với hydrogen</th>
+                                    <td>—</td><td>—</td><td>—</td><td>RH₄</td>
+                                    <td>RH₃</td><td>RH₂</td><td>RH</td>
+                                </tr>
+                                <tr>
+                                    <th>Ví dụ với hydrogen</th>
+                                    <td>—</td><td>—</td><td>—</td><td>CH₄</td>
+                                    <td>NH₃, PH₃</td><td>H₂S</td><td>HCl</td>
+                                </tr>
+                                <tr>
+                                    <th>Hydroxide / axit tương ứng</th>
+                                    <td>ROH</td><td>R(OH)₂</td><td>R(OH)₃</td>
+                                    <td>H₂RO₃</td><td>HNO₃, H₃RO₄</td>
+                                    <td>H₂RO₄</td><td>HRO₄</td>
+                                </tr>
+                                <tr>
+                                    <th>Ví dụ</th>
+                                    <td>NaOH</td><td>Mg(OH)₂</td><td>Al(OH)₃</td>
+                                    <td>H₂SiO₃, H₂CO₃</td><td>HNO₃, H₃PO₄</td>
+                                    <td>H₂SO₄</td><td>HClO₄</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="theory-note">
+                        Lưu ý: Đây là bảng tổng hợp các dạng công thức thường gặp
+                        trong chương trình phổ thông.
+                    </p>
+                </div>
+
+                <div class="theory-card">
+                    <h2>PHẦN 3. QUY LUẬT TUẦN HOÀN</h2>
+
+                    <h3>1. Oxide cao nhất</h3>
+                    <p>Oxide cao nhất là oxide trong đó nguyên tố thể hiện số oxi hóa cao nhất thường gặp khi liên kết với oxygen.</p>
+                    <p>Ví dụ: Na₂O, MgO, Al₂O₃, SiO₂, P₂O₅, SO₃, Cl₂O₇.</p>
+
+                    <h3>2. Hydroxide tương ứng</h3>
+                    <ul>
+                        <li>Na₂O → NaOH: bazơ.</li>
+                        <li>MgO → Mg(OH)₂: bazơ.</li>
+                        <li>Al₂O₃ → Al(OH)₃: hydroxide lưỡng tính.</li>
+                        <li>P₂O₅ → H₃PO₄: axit.</li>
+                        <li>SO₃ → H₂SO₄: axit.</li>
+                    </ul>
+
+                    <h3>3. Trong một chu kì</h3>
+                    <p>Từ trái sang phải, tính kim loại nhìn chung giảm dần, tính phi kim nhìn chung tăng dần. Tính chất oxide và hydroxide thường chuyển từ bazơ sang lưỡng tính rồi đến axit.</p>
+                    <div class="trend">
+                        <span>Bazơ</span><b>→</b><span>Lưỡng tính</span><b>→</b><span>Axit</span>
+                    </div>
+
+                    <h3>4. Trong một nhóm A</h3>
+                    <p>Khi đi từ trên xuống dưới trong một nhóm, tính kim loại thường tăng, còn tính phi kim thường giảm. Với nhiều nhóm kim loại, tính bazơ của hydroxide có xu hướng tăng.</p>
+
+                    <h3>5. Vì sao có quy luật?</h3>
+                    <p>Điện tích hạt nhân, số lớp electron và lực hút giữa hạt nhân với electron hóa trị góp phần tạo nên sự biến đổi tuần hoàn của tính kim loại, tính phi kim và tính axit – bazơ của hợp chất.</p>
+                </div>
+
+                <div class="theory-card">
+                    <h2>PHẦN 4. VÍ DỤ MINH HỌA</h2>
+
+                    <div class="theory-example">
+                        <h3>Ví dụ 1. Phosphorus (P) thuộc nhóm VA</h3>
+                        <p>Hóa trị cao nhất với oxygen: V.</p>
+                        <p>Oxide cao nhất: P₂O₅.</p>
+                        <p>Axit tương ứng: H₃PO₄.</p>
+                    </div>
+
+                    <div class="theory-example">
+                        <h3>Ví dụ 2. Barium (Ba) thuộc nhóm IIA</h3>
+                        <p>Hóa trị cao nhất với oxygen: II.</p>
+                        <p>Oxide cao nhất: BaO.</p>
+                        <p>Hydroxide tương ứng: Ba(OH)₂.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="quizView" class="view">
             <div class="kahoot-app">
@@ -89,10 +260,13 @@
                     <div class="result-emoji">🧪</div>
                     <h2>Thử thách kiến thức Hóa học</h2>
                     <p>Nhập thông tin để tham gia trò chơi.</p>
+
                     <label for="playerName">Tên người chơi</label>
                     <input id="playerName" type="text" placeholder="Nhập tên của bạn">
+
                     <label for="playerClass">Lớp</label>
                     <input id="playerClass" type="text" placeholder="Ví dụ: 10Si">
+
                     <button id="startQuiz" class="next-btn">🚀 Bắt đầu</button>
                     <p id="startError" class="start-error"></p>
                 </div>
@@ -102,12 +276,15 @@
                         <span id="questionCount">Câu 1/10</span>
                         <span id="timerText">⏱ 20 giây</span>
                     </div>
+
                     <div class="progress-track">
                         <div id="progressBar"></div>
                     </div>
+
                     <div class="kahoot-question-card">
                         <h2 id="kahootQuestion">Câu hỏi</h2>
                     </div>
+
                     <div id="kahootOptions" class="kahoot-options"></div>
                     <div id="kahootFeedback" class="kahoot-feedback"></div>
                     <button id="nextQuestion" class="next-btn" hidden>Câu tiếp theo →</button>
@@ -124,191 +301,6 @@
                 </div>
             </div>
         </section>
-
-
-        
-        
-<section id="theoryView" class="view">
-  <div class="theory-container">
-    <h1>📚 LÝ THUYẾT HÓA HỌC</h1>
-    <p class="theory-intro">
-      Phương pháp lập công thức oxide cao nhất và hydroxide tương ứng
-      của các nguyên tố nhóm A.
-    </p>
-
-    <div class="theory-card">
-      <h2>PHẦN 1. PHƯƠNG PHÁP THIẾT LẬP</h2>
-
-      <h3>Bước 1. Xác định hóa trị cao nhất với oxygen</h3>
-      <p>
-        Đối với các nguyên tố nhóm A, hóa trị cao nhất với oxygen
-        thường tương ứng với số thứ tự nhóm A, từ IA đến VIIA.
-        Gọi hóa trị đó là n.
-      </p>
-
-      <h3>Bước 2. Viết công thức oxide cao nhất</h3>
-      <p>Gọi nguyên tố cần xét là R, oxygen có hóa trị II.</p>
-      <ul>
-        <li><b>n lẻ:</b> Công thức oxide là R₂Oₙ.</li>
-        <li><b>n chẵn:</b> Công thức R₂Oₙ được tối giản thành ROₙ/₂.</li>
-      </ul>
-
-      <div class="theory-example">
-        <b>Ví dụ:</b> Nhóm VA có n = 5, oxide cao nhất của phosphorus
-        là P₂O₅.
-      </div>
-
-      <h3>Bước 3. Viết hydroxide tương ứng</h3>
-      <ul>
-        <li>
-          <b>Kim loại nhóm IA, IIA, IIIA:</b>
-          thường viết hydroxide dạng bazơ ROH, R(OH)₂, R(OH)₃.
-        </li>
-        <li>
-          <b>Phi kim:</b> thường xét axit có oxygen tương ứng với
-          oxide cao nhất.
-        </li>
-      </ul>
-
-      <p><b>Các dạng thường gặp:</b></p>
-      <ul>
-        <li>Nhóm IVA: H₂RO₃, ví dụ H₂CO₃.</li>
-        <li>Nhóm VA: HNO₃ hoặc H₃RO₄, ví dụ H₃PO₄.</li>
-        <li>Nhóm VIA: H₂RO₄, ví dụ H₂SO₄.</li>
-        <li>Nhóm VIIA: HRO₄, ví dụ HClO₄.</li>
-      </ul>
-    </div>
-
-    <div class="theory-card">
-      <h2>PHẦN 2. BẢNG HỆ THỐNG CÔNG THỨC</h2>
-      <div class="theory-table-wrap">
-        <table class="theory-table">
-          <thead>
-            <tr>
-              <th>Nội dung</th>
-              <th>IA</th>
-              <th>IIA</th>
-              <th>IIIA</th>
-              <th>IVA</th>
-              <th>VA</th>
-              <th>VIA</th>
-              <th>VIIA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Electron lớp ngoài cùng</th>
-              <td>1</td><td>2</td><td>3</td><td>4</td>
-              <td>5</td><td>6</td><td>7</td>
-            </tr>
-            <tr>
-              <th>Hóa trị với oxygen</th>
-              <td>I</td><td>II</td><td>III</td><td>IV</td>
-              <td>V</td><td>VI</td><td>VII</td>
-            </tr>
-            <tr>
-              <th>Oxide cao nhất</th>
-              <td>R₂O</td><td>RO</td><td>R₂O₃</td>
-              <td>RO₂</td><td>R₂O₅</td><td>RO₃</td><td>R₂O₇</td>
-            </tr>
-            <tr>
-              <th>Ví dụ oxide</th>
-              <td>Na₂O</td><td>MgO</td><td>Al₂O₃</td>
-              <td>SiO₂</td><td>N₂O₅, P₂O₅</td>
-              <td>SO₃</td><td>Cl₂O₇</td>
-            </tr>
-            <tr>
-              <th>Hóa trị với hydrogen</th>
-              <td>—</td><td>—</td><td>—</td><td>IV</td>
-              <td>III</td><td>II</td><td>I</td>
-            </tr>
-            <tr>
-              <th>Hợp chất với hydrogen</th>
-              <td>—</td><td>—</td><td>—</td><td>RH₄</td>
-              <td>RH₃</td><td>RH₂</td><td>RH</td>
-            </tr>
-            <tr>
-              <th>Ví dụ với hydrogen</th>
-              <td>—</td><td>—</td><td>—</td><td>CH₄</td>
-              <td>NH₃, PH₃</td><td>H₂S</td><td>HCl</td>
-            </tr>
-            <tr>
-              <th>Hydroxide / axit tương ứng</th>
-              <td>ROH</td><td>R(OH)₂</td><td>R(OH)₃</td>
-              <td>H₂RO₃</td><td>HNO₃, H₃RO₄</td>
-              <td>H₂RO₄</td><td>HRO₄</td>
-            </tr>
-            <tr>
-              <th>Ví dụ</th>
-              <td>NaOH</td><td>Mg(OH)₂</td><td>Al(OH)₃</td>
-              <td>H₂SiO₃, H₂CO₃</td>
-              <td>HNO₃, H₃PO₄</td>
-              <td>H₂SO₄</td><td>HClO₄</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="theory-note">
-        Lưu ý: Dấu — thể hiện nội dung không xét trong bảng tổng hợp.
-        Các công thức trên là dạng thường gặp trong phạm vi kiến thức phổ thông.
-      </p>
-      
-<div class="theory-card">
-    <h2>PHẦN 3. QUY LUẬT TUẦN HOÀN</h2>
-
-    <h3>1. Oxit cao nhất</h3>
-    <p>Oxit cao nhất là oxit trong đó nguyên tố thể hiện hóa trị hoặc số oxi hóa cao nhất thường gặp khi liên kết với oxi.</p>
-    <p>Ví dụ: Na₂O, MgO, Al₂O₃, SiO₂, P₂O₅, SO₃, Cl₂O₇.</p>
-    <p><strong>Lưu ý:</strong> Công thức trong ví dụ biểu diễn oxit cao nhất thường gặp theo chương trình phổ thông; một số nguyên tố có nhiều oxit khác nhau.</p>
-
-    <h3>2. Hiđroxit tương ứng</h3>
-    <p>Hiđroxit tương ứng được xét từ oxit cao nhất. Với oxit axit, sản phẩm tương ứng thường là axit có oxi; với oxit bazơ, có thể tạo bazơ.</p>
-    <ul>
-        <li>Na₂O → NaOH: bazơ.</li>
-        <li>MgO → Mg(OH)₂: bazơ.</li>
-        <li>Al₂O₃ → Al(OH)₃: hiđroxit lưỡng tính.</li>
-        <li>SiO₂ → H₂SiO₃: axit yếu theo cách biểu diễn phổ thông.</li>
-        <li>P₂O₅ → H₃PO₄: axit.</li>
-        <li>SO₃ → H₂SO₄: axit.</li>
-    </ul>
-
-    <h3>3. Trong một chu kì</h3>
-    <p>Từ trái sang phải, tính kim loại nhìn chung giảm dần, tính phi kim nhìn chung tăng dần. Oxit và hiđroxit tương ứng thường chuyển dần từ tính bazơ sang lưỡng tính rồi đến tính axit.</p>
-    <div class="trend">
-        <span>Bazơ</span><b>→</b><span>Lưỡng tính</span><b>→</b><span>Axit</span>
-    </div>
-    <p>Ví dụ ở chu kì 3: NaOH có tính bazơ mạnh; Mg(OH)₂ là bazơ; Al(OH)₃ lưỡng tính; H₂SiO₃ là axit yếu.</p>
-
-    <h3>4. Trong một nhóm A</h3>
-    <p>Khi đi từ trên xuống dưới trong một nhóm, tính kim loại của các nguyên tố thường tăng, còn tính phi kim thường giảm. Với nhiều nhóm, tính bazơ của hiđroxit kim loại tăng dần theo chiều này.</p>
-    <p>Ví dụ nhóm IA: LiOH, NaOH, KOH đều là bazơ mạnh; nhìn chung tính bazơ tăng từ LiOH xuống KOH.</p>
-
-    <h3>5. Vì sao có quy luật?</h3>
-    <p>Điện tích hạt nhân, số lớp electron và lực hút giữa hạt nhân với electron hóa trị ảnh hưởng đến khả năng nhường hoặc nhận electron. Những yếu tố này góp phần tạo nên sự biến đổi tuần hoàn của tính kim loại, phi kim và tính axit – bazơ của hợp chất.</p>
-</div>
-
-    </div>
-
-    <div class="theory-card">
-      <h2>PHẦN 4. VÍ DỤ MINH HỌA</h2>
-
-      <div class="theory-example">
-        <h3>Ví dụ 1. Phosphorus (P) thuộc nhóm VA</h3>
-        <p>Hóa trị cao nhất với oxygen: V.</p>
-        <p>Oxide cao nhất: P₂O₅.</p>
-        <p>Axit tương ứng: H₃PO₄.</p>
-      </div>
-
-      <div class="theory-example">
-        <h3>Ví dụ 2. Barium (Ba) thuộc nhóm IIA</h3>
-        <p>Hóa trị cao nhất với oxygen: II.</p>
-        <p>Oxide cao nhất: Ba₂O₂ → tối giản thành BaO.</p>
-        <p>Hydroxide tương ứng: Ba(OH)₂.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
     </main>
 
     <footer>
