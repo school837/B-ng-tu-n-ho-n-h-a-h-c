@@ -456,49 +456,49 @@ document.querySelectorAll(".tab").forEach(button => {
 
 const questions = [
     {
-        q: "Nguyên tố nào có oxit cao nhất là SiO₂?",
+        q: "Nguyên tố nào có oxide cao nhất là SiO₂?",
         options: ["Na", "Si", "Mg", "Al"],
         answer: 1,
-        explain: "Silic thuộc nhóm IVA, có oxit cao nhất thường viết là SiO₂."
+        explain: "Silicon thuộc nhóm IVA, có oxide cao nhất thường viết là SiO₂."
     },
     {
-        q: "Công thức hiđroxit của liti là gì?",
+        q: "Công thức hydroxide của liti là gì?",
         options: ["LiOH", "Li₂O", "Li(OH)₂", "HLiO"],
         answer: 0,
-        explain: "Liti thuộc nhóm IA và tạo hiđroxit LiOH."
+        explain: "Lithium thuộc nhóm IA và tạo hydroxide LiOH."
     },
     {
-        q: "Oxit cao nhất R₂O₇ thường tương ứng với acid nào?",
+        q: "Oxide cao nhất R₂O₇ thường tương ứng với acid nào?",
         options: ["H₂RO₃", "H₃RO₄", "HRO₄", "H₂RO₄"],
         answer: 2,
         explain: "Ví dụ Cl₂O₇ tương ứng với acid HClO₄."
     },
     {
-        q: "Acid tương ứng với oxit cao nhất P₂O₅ là gì?",
+        q: "Acid tương ứng với oxide cao nhất P₂O₅ là gì?",
         options: ["H₃PO₃", "HPO₃", "H₄P₂O₇", "H₃PO₄"],
         answer: 3,
         explain: "P₂O₅ kết hợp với nước có thể tạo thành H₃PO₄."
     },
     {
-        q: "X có cấu hình electron lớp ngoài cùng 3s²3p⁴. Oxit cao nhất là gì?",
+        q: "X có cấu hình electron lớp ngoài cùng 3s²3p⁴. Oxide cao nhất là gì?",
         options: ["X₂O", "XO₃", "X₂O₃", "XO₂"],
         answer: 1,
-        explain: "X là lưu huỳnh, oxit cao nhất thường gặp là SO₃."
+        explain: "X là lưu huỳnh, oxide cao nhất thường gặp là SO₃."
     },
     {
         q: "R tạo RH₃ và oxit cao nhất R₂O₅. Acid tương ứng có công thức nào?",
         options: ["H₂RO₃", "H₃RO₄", "HRO₃", "H₂RO₄"],
         answer: 1,
-        explain: "Ví dụ photpho tạo H₃PO₄ tương ứng với P₂O₅."
+        explain: "Ví dụ photphorus tạo H₃PO₄ tương ứng với P₂O₅."
     },
     {
-        q: "R thuộc nhóm IIA, oxit RO có 28,57% oxi theo khối lượng. R là gì? (O = 16)",
+        q: "R thuộc nhóm IIA, oxide RO có 28,57% oxygen theo khối lượng. R là gì? (O = 16)",
         options: ["Mg", "Ca", "Ba", "Be"],
         answer: 1,
         explain: "16/(Mᵣ + 16) × 100% = 28,57%, suy ra Mᵣ xấp xỉ 40. R là Ca."
     },
     {
-        q: "Oxit cao nhất XO₃. Hiđrua H₂X chứa 5,88% H theo khối lượng. X là gì?",
+        q: "Oxide cao nhất XO₃. Hydride H₂X chứa 5,88% H theo khối lượng. X là gì?",
         options: ["O", "S", "C", "N"],
         answer: 1,
         explain: "2/(Mᵣ + 2) × 100% = 5,88%, suy ra Mᵣ xấp xỉ 32. X là S."
@@ -518,7 +518,7 @@ const questions = [
         q: "R₂O₇ tương ứng với acid HRO₄ có phân tử khối 100,5. R là gì?",
         options: ["Cl", "Br", "I", "F"],
         answer: 0,
-        explain: "M(R) = 100,5 - 1 - 64 = 35,5. Đó là clo."
+        explain: "M(R) = 100,5 - 1 - 64 = 35,5. Đó là chlorine."
     }
 ];
 
