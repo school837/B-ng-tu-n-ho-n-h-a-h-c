@@ -377,13 +377,27 @@ Li: ["LiOH", "Lithium hydroxide"]
 }
 
 
+
+
+
 function applyFilters() {
     const keyword = searchInput.value.trim().toLowerCase();
     const period = periodFilter.value;
     const category = categoryFilter.value;
 
     document.querySelectorAll(".element").forEach(card => {
-        const element = getElementByNumber(Number(card.dataset.number));
+        const number = card.dataset.number;
+
+        if (!number) {
+            if (card.classList.contains("lanthanide")) {
+                card.style.display = (!period || period === "6") ? "" : "none";
+            } else if (card.classList.contains("actinide")) {
+                card.style.display = (!period || period === "7") ? "" : "none";
+            }
+            return;
+        }
+
+        const element = getElementByNumber(Number(number));
 
         if (!element) return;
 
@@ -404,6 +418,10 @@ function applyFilters() {
                 : "none";
     });
 }
+
+
+
+
 
 searchInput.addEventListener("input", applyFilters);
 periodFilter.addEventListener("change", applyFilters);
