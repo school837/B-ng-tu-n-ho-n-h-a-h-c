@@ -165,7 +165,7 @@ const applications = {
     Al: "Dùng trong bao bì, dây dẫn và các kết cấu nhẹ.",
     Si: "Là vật liệu quan trọng trong sản xuất linh kiện bán dẫn và thủy tinh.",
     P: "Các hợp chất photpho được sử dụng trong phân bón.",
-    S: "Được sử dụng để sản xuất axit sulfuric và một số hóa chất.",
+    S: "Được sử dụng để sản xuất acid sulfuric và một số hóa chất.",
     Cl: "Các hợp chất clo được dùng trong khử trùng nước và sản xuất hóa chất.",
     K: "Các hợp chất kali được dùng trong phân bón.",
     Ca: "Là thành phần quan trọng của xương, răng và vật liệu xây dựng.",
@@ -442,13 +442,13 @@ const questions = [
         explain: "Liti thuộc nhóm IA và tạo hiđroxit LiOH."
     },
     {
-        q: "Oxit cao nhất R₂O₇ thường tương ứng với axit nào?",
+        q: "Oxit cao nhất R₂O₇ thường tương ứng với acid nào?",
         options: ["H₂RO₃", "H₃RO₄", "HRO₄", "H₂RO₄"],
         answer: 2,
-        explain: "Ví dụ Cl₂O₇ tương ứng với axit HClO₄."
+        explain: "Ví dụ Cl₂O₇ tương ứng với acid HClO₄."
     },
     {
-        q: "Axit tương ứng với oxit cao nhất P₂O₅ là gì?",
+        q: "Acid tương ứng với oxit cao nhất P₂O₅ là gì?",
         options: ["H₃PO₃", "HPO₃", "H₄P₂O₇", "H₃PO₄"],
         answer: 3,
         explain: "P₂O₅ kết hợp với nước có thể tạo thành H₃PO₄."
@@ -460,7 +460,7 @@ const questions = [
         explain: "X là lưu huỳnh, oxit cao nhất thường gặp là SO₃."
     },
     {
-        q: "R tạo RH₃ và oxit cao nhất R₂O₅. Axit tương ứng có công thức nào?",
+        q: "R tạo RH₃ và oxit cao nhất R₂O₅. Acid tương ứng có công thức nào?",
         options: ["H₂RO₃", "H₃RO₄", "HRO₃", "H₂RO₄"],
         answer: 1,
         explain: "Ví dụ photpho tạo H₃PO₄ tương ứng với P₂O₅."
@@ -478,7 +478,7 @@ const questions = [
         explain: "2/(Mᵣ + 2) × 100% = 5,88%, suy ra Mᵣ xấp xỉ 32. X là S."
     },
     {
-        q: "Dãy nào có tính bazơ giảm dần?",
+        q: "Dãy nào có tính base giảm dần?",
         options: [
             "NaOH > Mg(OH)₂ > Al(OH)₃ > H₂SiO₃",
             "H₂SiO₃ > Al(OH)₃ > Mg(OH)₂ > NaOH",
@@ -486,10 +486,10 @@ const questions = [
             "Mg(OH)₂ > H₂SiO₃ > NaOH > Al(OH)₃"
         ],
         answer: 0,
-        explain: "Trong chu kì 3, tính bazơ nhìn chung giảm dần từ NaOH đến Mg(OH)₂ và Al(OH)₃; H₂SiO₃ là axit yếu."
+        explain: "Trong chu kì 3, tính base nhìn chung giảm dần từ NaOH đến Mg(OH)₂ và Al(OH)₃; H₂SiO₃ là acid yếu."
     },
     {
-        q: "R₂O₇ tương ứng với axit HRO₄ có phân tử khối 100,5. R là gì?",
+        q: "R₂O₇ tương ứng với acid HRO₄ có phân tử khối 100,5. R là gì?",
         options: ["Cl", "Br", "I", "F"],
         answer: 0,
         explain: "M(R) = 100,5 - 1 - 64 = 35,5. Đó là clo."
