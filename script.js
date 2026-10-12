@@ -462,7 +462,7 @@ const questions = [
         explain: "Silicon thuộc nhóm IVA, có oxide cao nhất thường viết là SiO₂."
     },
     {
-        q: "Công thức hydroxide của liti là gì?",
+        q: "Công thức hydroxide của lithium là gì?",
         options: ["LiOH", "Li₂O", "Li(OH)₂", "HLiO"],
         answer: 0,
         explain: "Lithium thuộc nhóm IA và tạo hydroxide LiOH."
@@ -486,10 +486,10 @@ const questions = [
         explain: "X là lưu huỳnh, oxide cao nhất thường gặp là SO₃."
     },
     {
-        q: "R tạo RH₃ và oxit cao nhất R₂O₅. Acid tương ứng có công thức nào?",
+        q: "R tạo RH₃ và oxide cao nhất R₂O₅. Acid tương ứng có công thức nào?",
         options: ["H₂RO₃", "H₃RO₄", "HRO₃", "H₂RO₄"],
         answer: 1,
-        explain: "Ví dụ photphorus tạo H₃PO₄ tương ứng với P₂O₅."
+        explain: "Ví dụ phosphorus tạo H₃PO₄ tương ứng với P₂O₅."
     },
     {
         q: "R thuộc nhóm IIA, oxide RO có 28,57% oxygen theo khối lượng. R là gì? (O = 16)",
