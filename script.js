@@ -377,9 +377,6 @@ Li: ["LiOH", "Lithium hydroxide"]
 }
 
 
-
-
-
 function applyFilters() {
     const keyword = searchInput.value.trim().toLowerCase();
     const period = periodFilter.value;
@@ -389,16 +386,29 @@ function applyFilters() {
         const number = card.dataset.number;
 
         if (!number) {
-            if (card.classList.contains("lanthanide")) {
-                card.style.display = (!period || period === "6") ? "" : "none";
-            } else if (card.classList.contains("actinide")) {
-                card.style.display = (!period || period === "7") ? "" : "none";
-            }
+            const isLanthanide = card.classList.contains("lanthanide");
+            const isActinide = card.classList.contains("actinide");
+
+            const matchesPeriod = !period ||
+                (isLanthanide && period === "6") ||
+                (isActinide && period === "7");
+
+            const matchesCategory = !category ||
+                (isLanthanide && category === "Họ Lantan") ||
+                (isActinide && category === "Họ Actini");
+
+            const matchesKeyword =
+                card.textContent.toLowerCase().includes(keyword);
+
+            card.style.display =
+                matchesPeriod && matchesCategory && matchesKeyword
+                    ? ""
+                    : "none";
+
             return;
         }
 
         const element = getElementByNumber(Number(number));
-
         if (!element) return;
 
         const matchesKeyword =
@@ -418,8 +428,6 @@ function applyFilters() {
                 : "none";
     });
 }
-
-
 
 
 
