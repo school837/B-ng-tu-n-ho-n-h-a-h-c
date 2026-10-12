@@ -376,6 +376,7 @@ Li: ["LiOH", "Lithium hydroxide"]
     `;
 }
 
+
 function applyFilters() {
     const keyword = searchInput.value.trim().toLowerCase();
     const period = periodFilter.value;
@@ -383,6 +384,8 @@ function applyFilters() {
 
     document.querySelectorAll(".element").forEach(card => {
         const element = getElementByNumber(Number(card.dataset.number));
+
+        if (!element) return;
 
         const matchesKeyword =
             element.name.toLowerCase().includes(keyword) ||
