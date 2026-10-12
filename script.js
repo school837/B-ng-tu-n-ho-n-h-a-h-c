@@ -255,9 +255,6 @@ function drawTable() {
     applyFilters();
 }
 
-
-
-
 function showDetails(number) {
     const element = getElementByNumber(number);
     if (!element) return;
