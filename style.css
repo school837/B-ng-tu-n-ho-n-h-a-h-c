@@ -761,3 +761,79 @@ footer {
     padding:16px;
   }
 }
+.periodic-table{
+    display:grid;
+    grid-template-columns:repeat(18,minmax(0,1fr));
+    gap:5px;
+}
+
+.series-heading{
+    margin:20px 0 8px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.series-table{
+    display:grid;
+    grid-template-columns:repeat(15,minmax(0,1fr));
+    gap:5px;
+}
+
+.series-table .element{
+    position:relative;
+    width:100%;
+    min-width:0;
+    min-height:85px;
+    padding:5px 2px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #ccc;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.series-table .number{
+    align-self:flex-start;
+    font-size:10px;
+}
+
+.series-table .symbol{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.series-table .name{
+    font-size:10px;
+    overflow-wrap:anywhere;
+    text-align:center;
+}
+
+.series-table .lanthanide{
+    background:#e8d9ff;
+}
+
+.series-table .actinide{
+    background:#ffdfd6;
+}
+
+@media(max-width:900px){
+    .periodic-table{
+        min-width:750px;
+    }
+
+    .series-table{
+        grid-template-columns:repeat(15,minmax(55px,1fr));
+        min-width:850px;
+    }
+}
+/* Đồng bộ lề khoảng cách cho tiêu đề phân tách hai nhóm họ lantan và actini */
+.series-label {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--text);
+    border-left: 4px solid var(--primary);
+    padding-left: 8px;
+}
